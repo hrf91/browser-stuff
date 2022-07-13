@@ -1,7 +1,13 @@
-document.querySelector("#example-span").textContent = "Goodbye"
+document.getElementById("bitcoin-button").addEventListener("click", (e) => {
+    e.target.textContent = "Hi!"
+})
+
+
 
 const divs = document.querySelectorAll("div");
 
-for (let d of divs) {
-    d.innerText = "Changed!";
-}
+divs.forEach((d, i) => {
+    d.addEventListener("click", (e) => {
+        button.textContent = i;
+    })
+})
