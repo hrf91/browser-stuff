@@ -1,13 +1,11 @@
-document.getElementById("bitcoin-button").addEventListener("click", (e) => {
-    e.target.textContent = "Hi!"
-})
+const updateBitcoinButtonText = (val) => {
+    document.getElementById("bitcoin-button").textContent = val;
+}
 
 
-
-const divs = document.querySelectorAll("div");
-
-divs.forEach((d, i) => {
-    d.addEventListener("click", (e) => {
-        button.textContent = i;
-    })
-})
+//Handle browser/node differences
+if (typeof exports != 'undefined') {
+        module.exports = {
+        updateBitcoinButtonText
+    }
+}
